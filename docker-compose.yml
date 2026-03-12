@@ -21,7 +21,7 @@ services:
       DB_NAME: appdb
       PORT: 3000
     ports:
-      - "3000:3000"
+      - "3001:3000"
     depends_on:
       - db
     networks:
@@ -30,7 +30,7 @@ services:
   frontend:
     build: ./frontend
     ports:
-      - "8081:80"
+      - "9000:9001"
     depends_on:
       - backend
     networks:

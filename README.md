@@ -16,7 +16,7 @@ Pour lancer l'application, exécutez la commande suivante :
 make up
 ```
 
-L'application sera accessible à l'adresse suivante : [http://localhost:8080](http://localhost:8080)
+L'application sera accessible à l'adresse suivante : [http://localhost:9000](http://localhost:9000)
 
 ## Commandes utiles (Makefile)
 
