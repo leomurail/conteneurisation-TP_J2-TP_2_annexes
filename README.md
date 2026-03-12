@@ -14,22 +14,38 @@ Pour lancer l'application, exécutez la commande suivante :
 
 ```bash
 make up
-# ou : docker compose up -d
 ```
 
 L'application sera accessible à l'adresse suivante : [http://localhost:8080](http://localhost:8080)
 
 ## Commandes utiles (Makefile)
 
-- `make up` : Démarre les conteneurs en arrière-plan.
-- `make down` : Arrête et supprime les conteneurs.
-- `make logs` : Affiche les logs des conteneurs en temps réel.
-- `make build` : (Re)construit les images Docker.
-- `make clean` : Arrête les conteneurs, supprime les volumes et nettoie les ressources Docker inutilisées.
+### Démarre les conteneurs en arrière-plan.
 
-## Architecture
+```bash
+make up
+```
 
-- **Frontend** : Servi par Nginx sur le port 8080. Il interroge le backend via un reverse proxy configuré dans Nginx.
-- **Backend** : API Node.js/Express sur le port 3000. Il se connecte à la base de données pour récupérer le message.
-- **Base de données** : PostgreSQL. Un script d'initialisation (`init.sql`) insère un message par défaut.
-# conteneurisation-TP_J2-TP_2_annexes
+### Arrête et supprime les conteneurs.
+
+```bash
+make down
+```
+
+### Affiche les logs des conteneurs en temps réel.
+
+```bash
+make logs
+```
+
+### (Re)construit les images Docker.
+
+```bash
+make build
+```
+
+### Clean tout
+
+```bash
+make clean
+```
