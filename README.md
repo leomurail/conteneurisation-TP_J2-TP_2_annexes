@@ -1,12 +1,29 @@
 # TP 2 - Docker Compose (Frontend + Backend + DB)
 
-Ce projet implémente une architecture multi-services avec Docker Compose, comprenant un backend (Node.js), un frontend (Nginx/HTML), et une base de données (PostgreSQL).
-
 ## Prérequis
 
 - Docker
 - Docker Compose
-- Make (optionnel, pour utiliser le Makefile)
+- Make
+
+## Architecture
+
+```bash
+.
+├── Makefile : makefile pour automatiser les tâches
+├── README.md : ce fichier
+├── TP_2_docker-compose_annexes.pdf : instructions du TP
+├── backend
+│   ├── Dockerfile : instructions pour construire l'image docker
+│   ├── index.js : code source du backend
+│   └── package.json : dépendances du backend
+├── docker-compose.yml : docker compose file pour orchestrer les conteneurs
+├── frontend
+│   ├── Dockerfile : instructions pour construire l'image docker
+│   ├── index.html : code source du frontend
+│   └── nginx.conf : configuration nginx
+└── init.sql : script sql pour initialiser la base de données
+```
 
 ## Démarrage rapide
 
